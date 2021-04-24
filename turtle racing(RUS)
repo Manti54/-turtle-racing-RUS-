@@ -1,0 +1,67 @@
+from turtle import*
+from random import randint
+
+    
+def markup():
+    pu()
+    goto(200, 200)
+    right(90)
+    down()
+    forward(400)
+
+def dance():
+    up()
+    goto(0, -100)
+    down()
+    begin_fill()
+    fillcolor("yellow")
+    circle(100)
+    end_fill()
+    up()
+    goto(-67, -40)
+    setheading(-60)
+    width(5)
+    down()
+    circle(80, 120)
+    fillcolor("black")
+    for i in range(-35, 105, 70):
+        up()
+        goto(i, 35)
+        setheading(0)
+        down()
+        begin_fill()
+        circle(10)
+        end_fill()
+    hideturtle()
+    done()
+    exitonclick()
+
+markup()
+t1 = Turtle()
+t2 = Turtle()
+t3 = Turtle()
+
+
+t1.color('blue')
+t1.pu()
+t1.goto(-200, 0)
+t1.pensize(2)
+t1.shape('turtle')
+
+t2.color('red')
+t2.pu()
+t2.goto(-200, 50)
+t2.pensize(2)
+t2.shape('turtle')
+
+t3.color('green')
+t3.pu()
+t3.goto(-200, 100)
+t3.pensize(2)
+t3.shape('turtle')
+
+
+while t1.xcor()<=200 and t2.xcor()<=200 and t3.xcor()<=200:
+    t1.fd(randint(2,16))
+    t2.fd(randint(2,16))
+    t3.fd(randint(2,16))
